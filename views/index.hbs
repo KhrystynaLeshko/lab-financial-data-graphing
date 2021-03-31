@@ -13,13 +13,22 @@
 <body>
   <h1> {{title}} </h1>
   <p>Welcome to {{title}} </p>
+
   <form method="GET">
-    <label for="start">From <input type="date">
+    <label for="start">From <input type="date" name="start" id="start">
     </label>
-    <label for="end">To <input type="date">
+    <label for="end">To <input type="date" name="end" id="end">
     </label>
+
+    <select name="currency" id="currency">
+      <option value="USD" selected>USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+    </select>
+
     <button>Submit</button>
   </form>
+
   <canvas id="myChart" width="400" height="400"></canvas>
   <script src="/javascripts/financial-data.js" charset="utf-8"></script>
 </body>
